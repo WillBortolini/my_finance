@@ -13,5 +13,5 @@ export interface User {
     role: UserRole;
     createdAt: Date;
     updatedAt: Date;
-    deletedAt: Date;
+    deletedAt?: Date;
 }
