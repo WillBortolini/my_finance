@@ -28,7 +28,7 @@ describe('FindAllUsersService Tests', () => {
     })
 
     describe('Function: execute', () => {
-        it('should be get all users successfull', async () => {
+        it('should be find all users successfull', async () => {
             mockUserRepository.findAll.mockResolvedValue([userMock, userMock]);
 
             const result  = await findAllUsersService.execute();
