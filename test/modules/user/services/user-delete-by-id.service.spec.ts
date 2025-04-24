@@ -5,7 +5,7 @@ import { FindUserByIdService } from "../../../../src/modules/user/services/user-
 import { userMock } from "../mocks/user.mock";
 
 describe('DeleteUserByIdService Tests', () => {
-    let deleteUserByIdService: DeleteUserByIdService
+    let deleteUserByIdService: DeleteUserByIdService;
 
     const mockUserRepository = {
         deleteUserById: jest.fn()
@@ -13,7 +13,7 @@ describe('DeleteUserByIdService Tests', () => {
 
     const mockFindUserByIdService = {
         execute: jest.fn()
-    }
+    };
 
     beforeAll(async () => {
         const moduleFixture: TestingModule = await Test.createTestingModule({
@@ -49,5 +49,5 @@ describe('DeleteUserByIdService Tests', () => {
             expect(mockUserRepository.deleteUserById).toHaveBeenCalledWith(1);
             expect(result).toBeUndefined();
         });
-    })
+    });
 })
