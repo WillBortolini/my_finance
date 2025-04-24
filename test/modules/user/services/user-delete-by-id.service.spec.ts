@@ -44,7 +44,7 @@ describe('DeleteUserByIdService Tests', () => {
             mockFindUserByIdService.execute.mockResolvedValue(userMock);mockUserRepository.deleteUserById.mockResolvedValue(undefined);
             
             const result = await deleteUserByIdService.execute(1);
-s
+
             expect(mockFindUserByIdService.execute).toHaveBeenCalledWith(1);
             expect(mockUserRepository.deleteUserById).toHaveBeenCalledWith(1);
             expect(result).toBeUndefined();
